@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Quick and easy summoner lookup">
+    <meta name="keywords" content="league of legends, pog.gg, summoner, champion data">
+    <meta name="author" content="Connor Carroll">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Pog.gg | Home</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="navigation">
+                <ul>
+                    <li class="current"><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'champions' %}">Champions</a></li>
+                    <li><a href="{% url 'leaderboards' %}">Leaderboards</a></li>
+                    <li><a href="{% url 'clubs' %}">Clubs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="title">
+        <div class="container">
+            <h1><a href="{% url 'index' %}">pog.<span class="highlight">gg</span></a></h1>
+        </div>    
+    </section>   
+
+    <section id="summoner-lookup">
+        <div class="container">
+            <form method ="POST">
+               {% csrf_token %}
+               {{ form }}
+               <button type ="submit" class = "button_1">Pog</button>
+            </form>    
+        </div>
+    </section>  
+
+    <section id="logo">
+        <div class="container">
+            <div id="img">
+                <img src="{% static 'images/swords.png' %}">
+            </div>
+        </div>
+    </section>    
+
+    <footer>
+        <p>&copy 2019 pog.gg</p>
+    </footer>
+
+</body>
+</html>

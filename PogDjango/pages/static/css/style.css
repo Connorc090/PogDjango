@@ -1,0 +1,116 @@
+body {
+    font-size: 15px;
+    line-height: 1.5;
+
+    padding: 0;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.button_1{
+    font-size: 18px;
+    height: 36px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+  }
+
+/* Header */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 50px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+header nav {
+    float: center;
+    text-align: center;
+}
+
+header li {
+    display: inline;
+    padding: 0 100px 0 100px;
+}
+
+header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Title */
+#title {
+    font-size: 120px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#title h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+#title a {
+    text-decoration: none;
+    color: black;
+}
+
+.highlight {
+    color: #e8491d;
+}
+
+/* Summoner Lookup */
+#summoner-lookup {
+    text-align: center;
+}
+
+#summoner-lookup input[type="text"] {
+    text-align: center;
+    line-height: 0; 
+    height: 30px;   
+}
+
+/* Logo */
+#img {
+text-align: center;
+margin-top: 40px;
+margin-bottom: 80px;
+padding-bottom: 40px;
+}
+
+#img img{
+    width: 300px;
+    height: 200px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 15px;
+}
