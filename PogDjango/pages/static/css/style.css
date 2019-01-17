@@ -9,7 +9,7 @@ body {
 
 /* Global */
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -103,7 +103,7 @@ margin-bottom: 80px;
 padding-bottom: 40px;
 }
 
-#img img{
+#img img {
     width: 300px;
     height: 200px;
 }
@@ -113,4 +113,57 @@ footer {
     text-align: center;
     margin-top: 0px;
     padding-top: 15px;
+}
+
+/* Summoner Page */
+
+/* Profile */
+#name h1 {
+    text-align: center;
+    font-size: 80pt;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#level h2 {
+    text-align: center;
+    font-size: 40pt;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#icon img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 120px;
+    margin-bottom: 35px;
+}
+
+/* Ranks */
+#rank_info .rank {
+    float: left;
+    text-align: center;  
+    width: 32.15%;
+    padding: 10px; 
+}
+
+#rank_info .rank img {
+    width: 200px;
+}
+
+#rank_info .rank .large img {
+    width: 250px;
+}
+
+#rank_info .rank .large h2 {
+    font-size: 25pt;
+}
+
+#rank_info .rank .small img {
+    margin-top: 70px;
 }

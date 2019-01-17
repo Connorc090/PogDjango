@@ -12,4 +12,7 @@ def clubs(request):
 
 def leaderboards(request):
     return render(request, "leaderboards.html", {})
+
+def summoner (request):
+    return render(request, 'summoner.html', {})    
  

@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Quick and easy summoner lookup">
+    <meta name="keywords" content="league of legends, pog.gg, summoner, champion data">
+    <meta name="author" content="Connor Carroll">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Pog.gg | Home</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="navigation">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'champions' %}">Champions</a></li>
+                    <li><a href="{% url 'leaderboards' %}">Leaderboards</a></li>
+                    <li><a href="{% url 'clubs' %}">Clubs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id = "profile">
+        <div class = "container">
+            <div id="name">
+                <h1>{{ name }}</h1>
+            </div>
+            <div id="level">
+                    <h2>Level {{ level }}</h2>
+            </div>
+            <div id="icon">
+                <img src = "{{ icon }}">
+            </div>
+        </div>
+    </section>
+
+    <section id="rank_info">
+        <div class="container">
+            <div class="rank">
+                <div class="small">
+                    {% if flex_tier == 'IRON' %}
+                    <img src="{% static 'images/emblems/Iron_Emblem.png' %}">
+                    {% elif flex_tier == 'BRONZE' %}
+                    <img src="{% static 'images/emblems/Bronze_Emblem.png' %}">
+                    {% elif flex_tier == 'SILVER' %}
+                    <img src="{% static 'images/emblems/Silver_Emblem.png' %}">
+                    {% elif flex_tier == 'GOLD' %}
+                    <img src="{% static 'images/emblems/Gold_Emblem.png' %}">
+                    {% elif flex_tier == 'PLATINUM' %}
+                    <img src="{% static 'images/emblems/Platinum_Emblem.png' %}">
+                    {% elif flex_tier == 'DIAMOND' %}
+                    <img src="{% static 'images/emblems/Diamond_Emblem.png' %}">
+                    {% elif flex_tier == 'MASTER' %}
+                    <img src="{% static 'images/emblems/Master_Emblem.png' %}">
+                    {% elif flex_tier == 'GRANDMASTER' %}
+                    <img src="{% static 'images/emblems/Grandmaster_Emblem.png' %}">
+                    {% elif flex_tier == 'CHALLENGER' %}
+                    <img src="{% static 'images/emblems/Challenger_Emblem.png' %}">
+                    {% else %}
+                    <img src="{% static 'images/emblems/Unranked_Emblem.png' %}">
+                    {% endif %}
+
+                    {% if flexx == True %}
+                    <h2>Flex: {{ flex_tier }} {{ flex_rank }} {{ flex_lp }}lp</h2>
+                    {% else %}
+                    <h2>Flex: Unranked</h2>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="rank">
+                <div class="large">
+                    {% if solo_tier == 'IRON' %}
+                    <img src="{% static 'images/emblems/Iron_Emblem.png' %}">
+                    {% elif solo_tier == 'BRONZE' %}
+                    <img src="{% static 'images/emblems/Bronze_Emblem.png' %}">
+                    {% elif solo_tier == 'SILVER' %}
+                    <img src="{% static 'images/emblems/Silver_Emblem.png' %}">
+                    {% elif solo_tier == 'GOLD' %}
+                    <img src="{% static 'images/emblems/Gold_Emblem.png' %}">
+                    {% elif solo_tier == 'PLATINUM' %}
+                    <img src="{% static 'images/emblems/Platinum_Emblem.png' %}">
+                    {% elif solo_tier == 'DIAMOND' %}
+                    <img src="{% static 'images/emblems/Diamond_Emblem.png' %}">
+                    {% elif solo_tier == 'MASTER' %}
+                    <img src="{% static 'images/emblems/Master_Emblem.png' %}">
+                    {% elif solo_tier == 'GRANDMASTER' %}
+                    <img src="{% static 'images/emblems/Grandmaster_Emblem.png' %}">
+                    {% elif solo_tier == 'CHALLENGER' %}
+                    <img src="{% static 'images/emblems/Challenger_Emblem.png' %}">
+                    {% else %}
+                    <img src="{% static 'images/emblems/Unranked_Emblem.png' %}">
+                    {% endif %}
+
+
+                    {% if solo == True %}
+                    <h2>Solo/duo: {{ solo_tier }} {{solo_rank}} {{solo_lp}}lp</h2>
+                    {% else %}
+                    <h2>Solo/duo: Unranked</h2>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="rank">
+                <div class="small">
+                    {% if tt_tier == 'IRON' %}
+                    <img src="{% static 'images/emblems/Iron_Emblem.png' %}">
+                    {% elif tt_tier == 'BRONZE' %}
+                    <img src="{% static 'images/emblems/Bronze_Emblem.png' %}">
+                    {% elif tt_tier == 'SILVER' %}
+                    <img src="{% static 'images/emblems/Silver_Emblem.png' %}">
+                    {% elif tt_tier == 'GOLD' %}
+                    <img src="{% static 'images/emblems/Gold_Emblem.png' %}">
+                    {% elif tt_tier == 'PLATINUM' %}
+                    <img src="{% static 'images/emblems/Platinum_Emblem.png' %}">
+                    {% elif tt_tier == 'DIAMOND' %}
+                    <img src="{% static 'images/emblems/Diamond_Emblem.png' %}">
+                    {% elif tt_tier == 'MASTER' %}
+                    <img src="{% static 'images/emblems/Master_Emblem.png' %}">
+                    {% elif tt_tier == 'GRANDMASTER' %}
+                    <img src="{% static 'images/emblems/Grandmaster_Emblem.png' %}">
+                    {% elif tt_tier == 'CHALLENGER' %}
+                    <img src="{% static 'images/emblems/Challenger_Emblem.png' %}">
+                    {% else %}
+                    <img src="{% static 'images/emblems/Unranked_Emblem.png' %}">
+                    {% endif %}
+
+                    {% if twisted == True %}
+                    <h2>Twisted Treeline: {{ tt_tier }} {{ tt_rank }} {{ tt_lp }}lp</h2>
+                    {% else %}
+                    <h2>Twisted Treeline: Unranked</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="match_history">
+
+    </section>
+
+</body>
+</html>
