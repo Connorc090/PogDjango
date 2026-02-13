@@ -1,2 +1,2 @@
 # PogDjango
-Django site interacting with Riot's api
+An outdated Django site interacting with Riot's api to display player information.
